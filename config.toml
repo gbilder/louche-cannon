@@ -3,3 +3,13 @@ languageCode = "en-us"
 title = "Louche Cannon"
 description = "Blather, twaddle and piffle"
 theme = "zen"
+[params]
+  dateformat = "Mon, Jan 2, 2006"
+  logo = false
+  search = true
+  searchSize = 20
+  submitted = true
+  footer = "Blather, twaddle and piffle"
+  feedlinks = true
+  mobileMenu = true
+  copyright = "This site is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/)"

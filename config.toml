@@ -1,5 +1,5 @@
-baseURL = "http://www.gbilder.com/blog"
+baseURL = "http://gbilder.com.s3.eu-west-3.amazonaws.com/"
 languageCode = "en-us"
 title = "Louche Cannon"
 description = "Blather, twaddle and piffle"
-theme = "ananke"
+theme = "zen"

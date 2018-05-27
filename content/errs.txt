@@ -1,0 +1,113 @@
+*   Trying 208.254.38.72...
+* TCP_NODELAY set
+* Connected to api.crossref.org (208.254.38.72) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/ssl/cert.pem
+  CApath: none
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [93 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [3726 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Client hello (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server did not agree to a protocol
+* Server certificate:
+*  subject: CN=*.crossref.org
+*  start date: Feb 26 00:00:00 2018 GMT
+*  expire date: May 15 12:00:00 2020 GMT
+*  subjectAltName: host "api.crossref.org" matched cert's "*.crossref.org"
+*  issuer: C=US; O=DigiCert Inc; OU=www.digicert.com; CN=RapidSSL RSA CA 2018
+*  SSL certificate verify ok.
+> GET /snapshots/monthly/2018/04/all.xml.tar.gz HTTP/1.1
+> Host: api.crossref.org
+> Accept: */*
+> Authorization: Bearer yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY3Jvc3NyZWYub3JnLyIsImF1ZCI6ImVuaGFuY2VkY21zIiwianRpIjoiN0M5ODlFNTItMTFEQS00QkY3LUJCRUUtODFCMUM3QzE0OTZEIn0.NYe3-O066sce9R1fjMzNEvP88VqSEaYdBY622FDiG8Uq
+> User-Agent: Downloader (https://crossref.org/; mailto:gbilder@crossref.org)
+> 
+< HTTP/1.1 302 Found
+< Server: Apache-Coyote/1.1
+< Crossref-Deployment-Name: svc1a-1
+< Location: https://s3.amazonaws.com/org.crossref.snapshots/monthly/2018/04/all.xml.tar.gz?Signature=KL1qcROdkeEPR9AbeU6M80CU9vg%3D&AWSAccessKeyId=AKIAIXFXWCBAQXTFS47A&Expires=1523951122
+< Content-Length: 0
+< Date: Tue, 17 Apr 2018 07:30:21 GMT
+< Connection: close
+< 
+* Closing connection 0
+* TLSv1.2 (OUT), TLS alert, Client hello (1):
+} [2 bytes data]
+* Issue another request to this URL: 'https://s3.amazonaws.com/org.crossref.snapshots/monthly/2018/04/all.xml.tar.gz?Signature=KL1qcROdkeEPR9AbeU6M80CU9vg%3D&AWSAccessKeyId=AKIAIXFXWCBAQXTFS47A&Expires=1523951122'
+*   Trying 52.216.99.13...
+* TCP_NODELAY set
+* Connected to s3.amazonaws.com (52.216.99.13) port 443 (#1)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/ssl/cert.pem
+  CApath: none
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [87 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [2651 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Client hello (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server did not agree to a protocol
+* Server certificate:
+*  subject: C=US; ST=Washington; L=Seattle; O=Amazon.com Inc.; CN=s3.amazonaws.com
+*  start date: Sep 26 00:00:00 2017 GMT
+*  expire date: Sep 20 12:00:00 2018 GMT
+*  subjectAltName: host "s3.amazonaws.com" matched cert's "s3.amazonaws.com"
+*  issuer: C=US; O=DigiCert Inc; OU=www.digicert.com; CN=DigiCert Baltimore CA-2 G2
+*  SSL certificate verify ok.
+> GET /org.crossref.snapshots/monthly/2018/04/all.xml.tar.gz?Signature=KL1qcROdkeEPR9AbeU6M80CU9vg%3D&AWSAccessKeyId=AKIAIXFXWCBAQXTFS47A&Expires=1523951122 HTTP/1.1
+> Host: s3.amazonaws.com
+> Accept: */*
+> Authorization: Bearer yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY3Jvc3NyZWYub3JnLyIsImF1ZCI6ImVuaGFuY2VkY21zIiwianRpIjoiN0M5ODlFNTItMTFEQS00QkY3LUJCRUUtODFCMUM3QzE0OTZEIn0.NYe3-O066sce9R1fjMzNEvP88VqSEaYdBY622FDiG8Uq
+> User-Agent: Downloader (https://crossref.org/; mailto:gbilder@crossref.org)
+> 
+< HTTP/1.1 400 Bad Request
+< x-amz-request-id: 0B467FBD447A5940
+< x-amz-id-2: MxHXG4/jCL/N9btbKG24oWrfoOqa+pn6X7n056aI5TyiLad8szccD9p8rCBQuQhJgdtR9A9N3GY=
+< Content-Type: application/xml
+< Transfer-Encoding: chunked
+< Date: Tue, 17 Apr 2018 07:30:23 GMT
+< Connection: close
+< Server: AmazonS3
+< 
+{ [688 bytes data]
+* Closing connection 1
+* TLSv1.2 (OUT), TLS alert, Client hello (1):
+} [2 bytes data]

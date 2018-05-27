@@ -1,0 +1,5 @@
+baseURL = "http://www.gbilder.com/blog"
+languageCode = "en-us"
+title = "Louche Cannon"
+description = "Blather, twaddle and piffle"
+theme = "ananke"

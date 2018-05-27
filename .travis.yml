@@ -13,3 +13,16 @@ before_install:
 
 script:
   - hugo
+
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: $AWS_BUCKET
+    region: eu-west-3
+    skip_cleanup: true
+    local_dir: public
+    acl: public_read
+    cache_control: "max-age=31536000"
+    on:
+      all_branches: true

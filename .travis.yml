@@ -1,0 +1,14 @@
+language: python
+cache:
+  apt: true
+  pip: true
+
+before_install:
+  - set -e
+  - export STARTTIME="$(date +%s)"
+  - sudo apt-get -qq update
+  - sudo apt-get install -y libyaml-dev
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.40.3/hugo_0.40.3_Linux-64bit.deb
+  - sudo dpkg -i hugo*.deb
+
+  script: hugo
